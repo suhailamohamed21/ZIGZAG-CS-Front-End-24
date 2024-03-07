@@ -101,7 +101,7 @@ ol {
 }
 ol li::before {
     content: counter(li)"."; 
-    color:  hsl(332, 51%, 32%);
+    color:  hsl(14, 45%, 36%);
     display: inline-block;
     font-weight: bold;
     width: 20px ;
@@ -133,9 +133,6 @@ td{
     padding: 15px;
     padding-left: 25px;
 }
-tr:last-child{
-    border-bottom: none;
-}
 
 .word{
     font-family: "Outfit", sans-serif;
@@ -145,7 +142,11 @@ tr:last-child{
 .number{
     font-family: "Outfit", sans-serif;
     font-weight: 600;
-    color: hsl(332, 51%, 32%);
+    color: hsl(14, 45%, 36%);
+}
+.bottom{
+    border-bottom: none;
+    border-collapse:separate;
 }
 
 /* @media (min-width: 375px) {
@@ -153,8 +154,13 @@ tr:last-child{
         width: 350px;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     .container{
-        width: 1170px;
-    } */
+        width: 950px;
+    }
 }
+@media (min-width: 700px) {
+    .container{
+        width: 650px;
+    }
+} */
