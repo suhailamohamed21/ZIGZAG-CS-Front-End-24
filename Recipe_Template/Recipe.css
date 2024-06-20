@@ -5,7 +5,6 @@
 }
 
 .parent{
-    /* background-color: hsl(330, 100%, 98%); */
     background-color:  hsl(30, 54%, 90%);
     padding: 40px;
 }
@@ -15,7 +14,6 @@
     width: 800px;
     height: 100%;
     margin: 40px  auto;
-    /* margin-top: 40px; */
     border-radius: 15px;
 }
 
@@ -57,13 +55,9 @@ ul{
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     color:  hsl(24, 3%, 34%);
+    margin-left: 10px;
 }
-ol{
-    padding-left: 20px;
-    font-family: "Outfit", sans-serif;
-    font-weight: 400;
-    color:  hsl(24, 3%, 34%);
-}
+
 ul li{
     padding: 10px;
 }
@@ -93,11 +87,20 @@ hr{
     margin-bottom: 10px;
     padding: 20px;
 }
-
 ol {
     list-style: none;
     counter-reset: li;
-    
+    margin-left: 28px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    color:  hsl(24, 3%, 34%);
+}
+
+ol li {
+    counter-increment: li;
+    padding: 5px;
+    text-align:left;
+    position: relative;
 }
 ol li::before {
     content: counter(li)"."; 
@@ -105,13 +108,10 @@ ol li::before {
     display: inline-block;
     font-weight: bold;
     width: 20px ;
-    margin-left: -20px;
+    left: -20px;
+    position: absolute;
 }
-ol li {
-    counter-increment: li;
-    padding: 5px;
-    text-align:left;
-}
+
 .nutrition{
     margin: 20px;
     margin-top: 10px;
@@ -149,18 +149,81 @@ td{
     border-collapse:separate;
 }
 
-/* @media (min-width: 375px) {
+/* Mobile */
+@media (min-width: 350px) and (max-width: 767px) {
+    .parent{
+        margin: 0px;
+        padding: 0%;
+    }
     .container{
-        width: 350px;
+        width: 100%;
+        border-radius: 0%;
+        padding: 0%;
+    }
+    .head{
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 50px;
+        padding: 0px;
+    }
+    .image img{
+        border-radius: 0%;
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 40px;
+    }
+    h1{
+        padding: 0px 37px;
+        font-size: 45px;
+    }
+    .head p{
+        padding: 0px 37px;
+        line-height: 32px;
+        font-size: 22px;
+    }
+    .prepare {
+        font-size: 23px;
+    }
+    
+    .prepare h4{
+        padding: 5px 10px 10px 10px;
+        font-size: 25px;
+    }
+    .prepare ul{
+        
+        margin-left: 20px;
+    }
+    .ingredients{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .ingredients ul{
+        margin-top: 10px;
+        margin-left: 10px;
+        
+    }
+    .instructions{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .instructions ol{
+        margin-top: 10px;
+        margin-left: 40px;
+        list-style: none;
+    }
+    ol li::before {
+        left: -32px;
+    }
+
+    .nutrition{
+        font-size: 20px;
+    }
+    .nutrition p{
+        margin: 20px 0px;
+    }
+    hr{
+        width: 86%;
+        margin: 20px 0px;
+        margin-left: 35px;
     }
 }
-@media (min-width: 1000px) {
-    .container{
-        width: 950px;
-    }
-}
-@media (min-width: 700px) {
-    .container{
-        width: 650px;
-    }
-} */
